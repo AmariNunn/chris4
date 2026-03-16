@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { CalendarDays } from "lucide-react";
 import nicoleImg from "@assets/IMG_2611_1772064095430.JPG";
 import chrisImg from "@assets/IMG_1722_1772064111490.JPG";
 
@@ -9,6 +11,7 @@ const team = [
     credentials: "DC — Licensed in TN\nCertified in Subzero Aesthetics & Orthopedic Cryotherapy",
     image: nicoleImg,
     imageLabel: "Photo: Dr. Nicole Cox-Jordan",
+    calUrl: "https://cal.com/dr.-nicole-cox-jordan?redirect=false",
     bio: [
       "Dr. Nicole Cox-Jordan is a Nashville native and the first African American female Chiropractor to practice in the state of Tennessee. With over 25 years of experience, she provides a unique, unhurried, and comprehensive wellness experience alongside her husband Chris.",
       "She earned her Doctor of Chiropractic (DC) degree from Parker College of Chiropractic in Dallas, Texas, after completing her undergraduate studies at Fisk University. Her commitment to lifelong wellness is reflected in her personalized approach to patient care.",
@@ -20,6 +23,7 @@ const team = [
     credentials: "ISSA Certified — Fitness Training, Strength & Conditioning, Nutritional Counseling, Kinesiotaping",
     image: chrisImg,
     imageLabel: "Photo: Christopher Jordan, CPT",
+    calUrl: "https://cal.com/chris-jordan-ghrbdo?redirect=false",
     bio: [
       "Chris is an ISSA Certified Fitness Trainer and Nutrition Specialist who transformed his own health by losing 100 pounds through disciplined cardio and diet. His journey inspired him to help others achieve their own health goals through personalized programs and nutritional counseling.",
       "A Nashville native and long-standing member of The Temple Church, Chris brings a passion for community health and practical, effective wellness strategies to every client interaction.",
@@ -83,6 +87,14 @@ export function Team() {
                   <p className="text-muted-foreground text-sm mt-1 whitespace-pre-line" data-testid={`text-team-credentials-${idx}`}>
                     {member.credentials}
                   </p>
+                  <div className="mt-3">
+                    <a href={member.calUrl} target="_blank" rel="noopener noreferrer">
+                      <Button size="sm" variant="outline" className="rounded-full px-5 border border-accent/40 text-accent hover:bg-accent hover:text-white transition-all" data-testid={`button-team-book-${idx}`}>
+                        <CalendarDays className="w-3.5 h-3.5 mr-1.5" />
+                        View Availability
+                      </Button>
+                    </a>
+                  </div>
                   <div className="w-10 h-[2px] bg-accent mt-4" />
                 </div>
 

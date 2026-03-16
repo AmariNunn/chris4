@@ -49,7 +49,7 @@ export default function Services() {
   }, []);
 
   const CHIROPRACTIC_URL = "https://cal.com/dr.-nicole-cox-jordan/chiropractic-care";
-  const FITNESS_URL = "https://cal.com/dr.-nicole-cox-jordan/personal-fitness-training";
+  const FITNESS_URL = "https://cal.com/chris-jordan-ghrbdo/training";
   const HAPPY_HOUR_URL = "https://cal.com/dr.-nicole-cox-jordan/relaxation-therapy-happy-hour";
   const ESSENTIAL_URL = "https://cal.com/dr.-nicole-cox-jordan/essential-jordan-wellness-experience";
   const ENHANCED_URL = "https://cal.com/dr.-nicole-cox-jordan/enhanced-jordan-wellness-experience-body-sculpting-fat-freezing";

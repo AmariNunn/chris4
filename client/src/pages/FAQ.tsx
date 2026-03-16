@@ -56,7 +56,7 @@ const faqs: { question: string; answer: string; extraContent?: "get-started" }[]
 
 function GetStartedContent() {
   return (
-    <div className="mt-4 space-y-4">
+    <div className="mt-4 space-y-5">
       <p className="text-sm font-semibold text-accent">Deposit Required for Most Services</p>
       <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
         <Link href={INTAKE_URL}>
@@ -87,6 +87,21 @@ function GetStartedContent() {
             All Experiences
           </Button>
         </a>
+      </div>
+      <div className="space-y-2">
+        <p className="text-sm text-muted-foreground">You can also view all available appointments directly on each provider's calendar:</p>
+        <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
+          <a href="https://cal.com/dr.-nicole-cox-jordan?redirect=false" target="_blank" rel="noopener noreferrer">
+            <Button size="sm" variant="outline" className="rounded-full px-5 border border-primary/20 text-primary text-xs" data-testid="button-faq-dr-calendar">
+              Dr. Nicole's Calendar
+            </Button>
+          </a>
+          <a href="https://cal.com/chris-jordan-ghrbdo?redirect=false" target="_blank" rel="noopener noreferrer">
+            <Button size="sm" variant="outline" className="rounded-full px-5 border border-primary/20 text-primary text-xs" data-testid="button-faq-chris-calendar">
+              Chris's Calendar
+            </Button>
+          </a>
+        </div>
       </div>
     </div>
   );
