@@ -87,13 +87,14 @@ export function Team() {
                   <p className="text-muted-foreground text-sm mt-1 whitespace-pre-line" data-testid={`text-team-credentials-${idx}`}>
                     {member.credentials}
                   </p>
-                  <div className="mt-3">
+                  <div className="mt-3 space-y-1.5">
                     <a href={member.calUrl} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" variant="outline" className="rounded-full px-5 border border-accent/40 text-accent hover:bg-accent hover:text-white transition-all" data-testid={`button-team-book-${idx}`}>
                         <CalendarDays className="w-3.5 h-3.5 mr-1.5" />
                         View Availability
                       </Button>
                     </a>
+                    <p className="text-xs text-muted-foreground italic">Tip: Click the profile picture on the calendar page to browse all services.</p>
                   </div>
                   <div className="w-10 h-[2px] bg-accent mt-4" />
                 </div>

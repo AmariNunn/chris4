@@ -39,7 +39,7 @@ const faqs: { question: string; answer: string; extraContent?: "get-started" }[]
   {
     question: "How do I get started?",
     answer:
-      "Choose the option that fits you below. A deposit is required for most services.",
+      "Choose the option that fits you below.",
     extraContent: "get-started",
   },
   {
@@ -102,6 +102,7 @@ function GetStartedContent() {
             </Button>
           </a>
         </div>
+        <p className="text-xs text-muted-foreground italic">Tip: Once on the calendar page, click the profile picture to browse all available services.</p>
       </div>
     </div>
   );
