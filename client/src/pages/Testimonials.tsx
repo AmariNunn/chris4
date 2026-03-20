@@ -125,6 +125,7 @@ export default function Testimonials() {
                       src={item.src}
                       controls
                       playsInline
+                      preload="metadata"
                       className="w-full h-full object-contain"
                       data-testid={`video-testimonial-${idx}`}
                     />
