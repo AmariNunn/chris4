@@ -11,6 +11,8 @@ import testimonialVideo2 from "@assets/IMG_0470_1772391846808.mov";
 import testimonialVideo3 from "@assets/IMG_2660_1772495485675.mov";
 import testimonialVideo4 from "@assets/IMG_2664_1772495488167.mov";
 import testimonialVideo5 from "@assets/IMG_2725_1773524334878.MOV";
+import testimonialVideo6 from "@assets/0308(1)_(2)_1773977340608.mp4";
+import testimonialVideo7 from "@assets/0308_(2)_(2)_(1)_1773977609212.mp4";
 
 const allTestimonials = [
   {
@@ -44,15 +46,15 @@ const allTestimonials = [
     label: "Another client's journey with Jordan Wellness Experience.",
   },
   {
-    id: "gd1",
-    type: "iframe" as const,
-    src: "https://drive.google.com/file/d/1pIsV7LJdgn8okILrWbiAvimV8v3LL39_/preview",
+    id: "v6",
+    type: "video" as const,
+    src: testimonialVideo6,
     label: "A Jordan Wellness Experience client shares their transformation journey.",
   },
   {
-    id: "gd2",
-    type: "iframe" as const,
-    src: "https://drive.google.com/file/d/1XVJXYlnmWyqZRplZWqFKP40-LKKY5z8Y/preview",
+    id: "v7",
+    type: "video" as const,
+    src: testimonialVideo7,
     label: "See what our dedicated care has made possible for this client.",
   },
 ];
@@ -118,26 +120,15 @@ export default function Testimonials() {
                   transition={{ duration: 0.8, delay: (idx % 2) * 0.2 }}
                   className="flex flex-col"
                 >
-                  {item.type === "video" ? (
-                    <div className="rounded-md overflow-hidden shadow-xl bg-black aspect-video flex items-center justify-center">
-                      <video
-                        src={item.src}
-                        controls
-                        playsInline
-                        className="w-full h-full object-contain"
-                        data-testid={`video-testimonial-${idx}`}
-                      />
-                    </div>
-                  ) : (
-                    <div className="rounded-md overflow-hidden shadow-xl bg-black aspect-video flex items-center justify-center">
-                      <iframe
-                        src={item.src}
-                        allow="autoplay"
-                        className="w-full h-full"
-                        data-testid={`iframe-drive-video-${idx}`}
-                      />
-                    </div>
-                  )}
+                  <div className="rounded-md overflow-hidden shadow-xl bg-black aspect-video flex items-center justify-center">
+                    <video
+                      src={item.src}
+                      controls
+                      playsInline
+                      className="w-full h-full object-contain"
+                      data-testid={`video-testimonial-${idx}`}
+                    />
+                  </div>
                   <p className="text-center text-muted-foreground italic mt-6 text-sm">
                     {item.label}
                   </p>

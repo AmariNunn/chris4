@@ -33,7 +33,7 @@ Preferred communication style: Simple, everyday language.
 - **Services** (`/services`): Signature services (Chiropractic, Fitness, Happy Hour) and Premium services (Essential, Body Sculpting, Cryotherapy, Elite VIP) with videos, CTA
 - **Membership** (`/membership`): Membership model intro, 4 tiers (Essential ChiroFitness, Enhanced Body Sculpting, Elevated Cryotherapy, Elite VIP Concierge) with full descriptions, Apply for Membership + Contact Us CTAs
 - **Contact** (`/contact`): Contact form, Google Maps embed, phone/email/address/Instagram info, Book Appointment link
-- **Testimonials** (`/testimonials`): Placeholder testimonial cards + Google Review button
+- **Testimonials** (`/testimonials`): 7 local video testimonials + Google Review button
 
 ### Backend
 - **Framework**: Express 5 on Node.js with TypeScript (run via `tsx`)
