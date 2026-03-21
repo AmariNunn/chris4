@@ -12,6 +12,7 @@ import slideImg6 from "@/assets/images/img-4930.jpg";
 import slideImg7 from "@/assets/images/img-4462.jpg";
 import slideImg8 from "@assets/IMG_2364_1772494881531.jpg";
 import slideImg9 from "@assets/IMG_1065_1772494729327.jpeg";
+import slideImg10 from "@assets/1_(1)_1774091370045.jpg";
 
 const slides = [
   { src: slideImg1, alt: "Dr. Cox-Jordan chiropractic adjustment" },
@@ -22,6 +23,7 @@ const slides = [
   { src: slideImg7, alt: "Patient consultation" },
   { src: slideImg8, alt: "Wellness studio" },
   { src: slideImg9, alt: "Treatment session" },
+  { src: slideImg10, alt: "Patient at Jordan Wellness Experience" },
 ];
 
 export function Hero() {
@@ -38,6 +40,13 @@ export function Hero() {
 
   return (
     <>
+      {/* Preload all slide images so every transition is instant */}
+      <div className="hidden" aria-hidden="true">
+        {slides.map((slide, i) => (
+          <img key={i} src={slide.src} alt="" loading="eager" />
+        ))}
+      </div>
+
       <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
@@ -54,12 +63,14 @@ export function Hero() {
                 alt=""
                 className="absolute inset-0 w-full h-full object-cover scale-150 blur-3xl opacity-80"
                 aria-hidden="true"
+                loading="eager"
               />
               <img
                 src={slides[current].src}
                 alt={slides[current].alt}
                 className="absolute inset-0 w-full h-full object-contain scale-[1.3]"
                 data-testid={`hero-slide-${current}`}
+                loading="eager"
               />
             </motion.div>
           </AnimatePresence>
