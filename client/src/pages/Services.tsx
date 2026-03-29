@@ -379,7 +379,7 @@ export default function Services() {
                           loop
                           muted
                           playsInline
-                          preload="metadata"
+                          preload="auto"
                           className="absolute inset-0 w-full h-full object-contain"
                           data-testid={`video-premium-service-${i}`}
                         />
